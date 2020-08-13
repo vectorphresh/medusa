@@ -9,15 +9,16 @@ import numpy as np
 
 context = zmq.Context()
 footage_socket = context.socket(zmq.PUB)
-footage_socket.connect('tcp://192.168.1.12:5555')
+footage_socket.connect('tcp://192.168.1.11:5555')
 
 camera = picamera.PiCamera()
 camera.start_preview()
 time.sleep(2)
-camera.resolution = (480,640)
-camera.framerate = 30
+camera.resolution = (1200,1600)
+camera.framerate = 60
 camera.rotation = 90
-rawCapture =  picamera.array.PiRGBArray(camera, size=(480, 640))
+camera.iso = 1600
+rawCapture =  picamera.array.PiRGBArray(camera, size=(1200, 1600))
 
 for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
 	# grab the raw NumPy array representing the image, then initialize the timestamp

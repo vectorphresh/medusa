@@ -12,7 +12,7 @@ while True:
     try:
         frame = footage_socket.recv_string()
         img = base64.b64decode(frame)
-        npimg = np.fromstring(img, dtype=np.uint8)
+        npimg = np.frombuffer(img, dtype=np.uint8)
         Source = cv2.imdecode(npimg, 1)
         cv2.imshow("Stream", Source)
         cv2.waitKey(1)
