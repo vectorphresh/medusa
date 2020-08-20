@@ -1,0 +1,28 @@
+{
+  "name": "medusa-server",
+  "version": "1.0.0",
+  "description": "3D People Model Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vectorphresh/medusa.git"
+  },
+  "keywords": [
+    "3D",
+    "Machine",
+    "Learning",
+    "OpenCV"
+  ],
+  "author": "Mitch Francis",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/vectorphresh/medusa/issues"
+  },
+  "homepage": "https://github.com/vectorphresh/medusa#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
